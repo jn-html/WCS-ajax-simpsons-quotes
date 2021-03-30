@@ -32,6 +32,8 @@
         <h1 class="title">Simpson API</h1>
 
         <div class="content" id="chuck-norris"></div>
+        <!-- <button id="myBtn">New Quote</button> -->
+        <input id="myBtn" type="button" value="New">
       </div>
     </section>
 
@@ -64,6 +66,24 @@
 
 						`;
             document.querySelector("#chuck-norris").innerHTML = QuoteHtml;
+
+            var clearBtn = document.querySelector('input[type="button"]');
+
+            clearBtn.onclick = function(e) {
+              console.log(e)
+              fetchQuoteJSON()
+              document.querySelector("#chuck-norris").innerHTML = QuoteHtml;
+            }
+
+            // myBtn = document.querySelector('input');
+            // myBtn.addEventListener('click', QuoteHtml);
+
+
+            // document
+            //   .getElementById("myBtn")
+            //   .addEventListener("click", function () {
+            //     document.getElementById("chuck-norris").innerHTML = QuoteHtml;
+            //   });
           });
       }
 
